@@ -127,6 +127,7 @@ header nav a{
 }
 .carousel .list .item .introduce .seeMore:hover{
     background: #eee;
+    cursor: pointer;
 }
 .carousel .list .item:nth-child(1){
     transform: var(--item1-transform);
@@ -151,6 +152,7 @@ header nav a{
     opacity: var(--item5-opacity);
     pointer-events: none;
 }
+
 /* animation text in item2 */
 .carousel .list .item:nth-child(2) .introduce .title,
 .carousel .list .item:nth-child(2) .introduce .topic,
@@ -321,7 +323,7 @@ header nav a{
 }
 .arrows{
     position: absolute;
-    bottom: 10px;
+    bottom: 170px;
     width: 1140px;
     max-width: 90%;
     display: flex;
@@ -331,18 +333,22 @@ header nav a{
 }
 #prev,
 #next{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     font-family: monospace;
-    border: 1px solid #5555;
-    font-size: large;
+    border: 1.5px solid #5555;
+    font-size: 30px;
     bottom: 20%;
     left: 10%;
 }
 #next{
     left: unset;
     right: 10%;
+}
+#prev,
+#next:hover{
+    cursor: pointer;
 }
 #back{
     position: absolute;
@@ -357,8 +363,11 @@ header nav a{
     letter-spacing: 3px;
     background-color: transparent;
     padding: 10px;
-    /* opacity: 0; */
+    opacity: 0;
     transition: opacity 0.5s;
+}
+#back:hover{
+    cursor: pointer;
 }
 .carousel.showDetail #back{
     opacity: 1;
@@ -386,6 +395,8 @@ header nav a{
     transform: translate(-100%, -50%) rotate(90deg);
     filter: blur(130px);
 }
+
+
 @media screen and (max-width: 991px){
     /* ipad, tablets */
     .carousel .list .item{
@@ -400,6 +411,13 @@ header nav a{
 }
 @media screen and (max-width: 767px){
     /* mobile */
+
+    .arrows{
+  
+    bottom: 60px;
+
+   
+}
     .carousel{
         height: 600px;
     }
