@@ -437,6 +437,7 @@ header nav a{
         height: auto;
     }
   .carousel {
+    height: 850px;
     margin-top: 20px;
   }
   
@@ -500,8 +501,12 @@ header nav a{
   .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
     justify-content: center;
     padding-top: 10px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
   }
-  
+   .carousel.showDetail .list .item:nth-child(2) .detail .specifications::-webkit-scrollbar {
+    display: none;
+  }
   .carousel.showDetail .list .item:nth-child(2) .checkout {
     justify-content: center;
   }
@@ -520,9 +525,8 @@ header nav a{
   }
   
   #back {
-    bottom: 10px;
-    background: rgba(255,255,255,0.8);
-    padding: 8px 15px;
+    bottom: -47px;
+
   }
 }
 
