@@ -421,7 +421,7 @@ header nav a {
 #back {
     position: absolute;
     z-index: 100;
-    bottom: 0%;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     border: none;
@@ -524,7 +524,7 @@ header nav a {
     }
 
     .carousel {
-        height: 850px;
+        height: 900px;
         margin-top: 20px;
     }
 
