@@ -41,9 +41,6 @@ backButton.onclick = function(){
     carousel.classList.remove('showDetail');
 }
 
-// let autoSlideInterval = setInterval(() => {
-//     showSlider('next');
-// }, 8000);
 
 seeMoreButtons.forEach((button) => {
     button.onclick = function(){
@@ -52,3 +49,42 @@ seeMoreButtons.forEach((button) => {
         clearInterval(autoSlideInterval); 
     }
 });
+
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+carousel.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+}, false);
+
+
+function handleGesture() {
+    let swipeThreshold = 50;
+
+    if (touchEndX < touchStartX - swipeThreshold) {
+        showSlider('next');
+        restartAutoSlide();
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+        showSlider('prev');
+        restartAutoSlide();
+    }
+}
+
+// function restartAutoSlide() {
+//     clearInterval(autoSlideInterval);
+//     autoSlideInterval = setInterval(() => {
+//         showSlider('next');
+//     }, 8000);
+// }
+
+
+// let autoSlideInterval = setInterval(() => {
+//     showSlider('next');
+// }, 8000);
