@@ -41,9 +41,9 @@ backButton.onclick = function(){
     carousel.classList.remove('showDetail');
 }
 
-let autoSlideInterval = setInterval(() => {
-    showSlider('next');
-}, 8000);
+// let autoSlideInterval = setInterval(() => {
+//     showSlider('next');
+// }, 8000);
 
 seeMoreButtons.forEach((button) => {
     button.onclick = function(){
